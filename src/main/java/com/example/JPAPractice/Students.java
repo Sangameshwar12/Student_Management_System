@@ -2,6 +2,7 @@ package com.example.JPAPractice;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,5 +25,7 @@ public class Students{
     private int age;
 
     private int marks;
+    @OneToOne(mappedBy = "students")
+    LibraryCard libraryCard;
 
 }
