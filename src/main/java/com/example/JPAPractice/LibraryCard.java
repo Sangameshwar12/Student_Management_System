@@ -1,6 +1,7 @@
 package com.example.JPAPractice;
 
 
+import com.example.JPAPractice.EnumPackege.Department;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

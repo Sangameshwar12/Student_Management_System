@@ -1,8 +1,6 @@
 package com.example.JPAPractice;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +16,7 @@ public class Students{
 
     //@Id => to declare primary key
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int StudentId;
 
     private String name;
@@ -25,7 +24,8 @@ public class Students{
     private int age;
 
     private int marks;
-    @OneToOne(mappedBy = "students")
+
+    @OneToOne(mappedBy = "students", cascade = CascadeType.ALL)
     LibraryCard libraryCard;
 
 }

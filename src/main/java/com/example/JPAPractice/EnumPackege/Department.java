@@ -1,4 +1,4 @@
-package com.example.JPAPractice;
+package com.example.JPAPractice.EnumPackege;
 
 public enum Department {
 
